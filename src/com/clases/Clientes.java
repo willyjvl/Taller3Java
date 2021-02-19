@@ -2,41 +2,24 @@ package com.clases;
 
 import java.util.List;
 
-public class Clientes {
-    private String nombre;
-    private String telefono;
-    private String direccion;
-    private List<Producto> productos;
+public class Clientes extends Personas {
 
-    public String getNombre() {
-        return nombre;
+    private List<Producto> product;
+
+    public Clientes(String nombre, String cedula , String tipDoc, String celular, String direccion, List producto) {
+        super(nombre, cedula, tipDoc, celular, direccion);
+        this.product = producto;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getDatos2(){
+        return "cedula: " + getCedula() + " Tipo doc: " + getTipDoc() + " nombre: " + getNombre()  + " Celular: " + getCelular() + " Direccion: " + getDireccion() + ", Productos Cliente: " + product;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public List<Producto> getProduct() {
+        return product;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public List<Producto> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
+    public void setProduct(List<Producto> product) {
+        this.product = product;
     }
 }

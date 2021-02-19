@@ -26,6 +26,10 @@ public class Producto {
         return idProducto;
     }
 
+    public Integer getIdProductoInt(){
+        return Integer.parseInt(idProducto);
+    }
+
     public void setIdProducto(String idProducto) {
         this.idProducto = idProducto;
     }
@@ -35,6 +39,13 @@ public class Producto {
     }
 
     public void setCondiciones(String condiciones) {
+        this.condiciones = condiciones;
+    }
+
+    public Producto(String nombre, String carateristicas, String idProducto, String condiciones) {
+        this.nombre = nombre;
+        this.carateristicas = carateristicas;
+        this.idProducto = idProducto;
         this.condiciones = condiciones;
     }
 }
